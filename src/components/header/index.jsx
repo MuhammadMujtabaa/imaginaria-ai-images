@@ -22,8 +22,6 @@ const Header = () => {
   };
   window.addEventListener("scroll", fixHeaderFunction);
 
-
-
   return (
     <Fragment>
       <>
@@ -32,8 +30,8 @@ const Header = () => {
             <Popover
               className={`transition delay-150  duration-300 ease-in-out  w-full ${
                 stickyHeader === true
-                  ? "fixed z-10 bg-white shadow-md text-black"
-                  : "bg-black text-white "
+                  ? "fixed z-10 bg-white shadow-md text-[#030712]"
+                  : " text-white "
               }`}
             >
               <nav
@@ -80,13 +78,13 @@ const Header = () => {
                         size="md"
                         outLineColor={
                           stickyHeader
-                            ? "ring-[black] hover:bg-[black]"
+                            ? "ring-[#030712] hover:bg-[#030712]"
                             : "hover:bg-[white] ring-[white] "
                         }
                         textColor={
                           stickyHeader
-                            ? "text-[black] hover:text-[white]"
-                            : "hover:text-[black]  text-[white]"
+                            ? "text-[#030712] hover:text-[white]"
+                            : "hover:text-[#030712]  text-[white]"
                         }
                       >
                         Log in
@@ -97,11 +95,11 @@ const Header = () => {
                         onClick={() => {}}
                         bgColor={
                           stickyHeader
-                            ? "bg-black ring-[black]"
+                            ? "bg-[#030712] ring-[#030712]"
                             : "bg-white ring-[white]"
                         }
                         textColor={
-                          stickyHeader ? "text-[white]" : "text-[black]"
+                          stickyHeader ? "text-[white]" : "text-[#030712]"
                         }
                         size="md"
                       >
