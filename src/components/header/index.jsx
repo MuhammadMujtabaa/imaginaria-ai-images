@@ -3,13 +3,15 @@ import React, { Fragment, useEffect, useRef, useState } from "react";
 import { Images } from "../../assets/images";
 import Button from "../formComponents/button";
 import { navigation } from "../../config/constants";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 const { logo } = Images;
 
 // import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 const Header = () => {
+  const location = useLocation()
+  const isHome = ["/"]?.includes(location?.pathname)
+  
   const [stickyHeader, setStickyHeader] = useState(false);
-
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   /* Method that will fix header after a specific scrollable */
@@ -31,7 +33,7 @@ const Header = () => {
               className={`transition delay-150  duration-300 ease-in-out  w-full ${
                 stickyHeader === true
                   ? "fixed z-10 bg-white shadow-md text-[#030712]"
-                  : " text-white "
+                  : `${isHome ? "text-white " :"bg-[#030712] text-white"}`
               }`}
             >
               <nav
