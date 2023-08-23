@@ -45,7 +45,6 @@ const Button = (props) => {
 
   return (
     <button
-      //className={`text-white bg-[#FD6769] min-h-[60px] w-full rounded-full font-openSans_bold text-center ${className}`}
       className={mergedClasses}
       {...rest}
       disabled={isLoading}
