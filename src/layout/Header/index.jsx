@@ -5,7 +5,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { Link, useLocation } from "react-router-dom";
 import { Images } from "../../assets/images";
 import { navigation } from "../../config/constants";
-import Button from "../../components/formComponents/button";
+import { Button } from "../../components/formComponents";
 const { logo } = Images;
 export const Header = () => {
   const location = useLocation();
@@ -32,8 +32,8 @@ export const Header = () => {
             <Popover
               className={`transition delay-150  duration-300 ease-in-out  w-full ${
                 stickyHeader === true
-                  ? "fixed z-10 bg-white shadow-md text-[#030712]"
-                  : `${isHome ? "text-white " : "bg-[#030712] text-white"}`
+                  ? "fixed z-10 bg-white shadow-md text-[black]"
+                  : `${isHome ? "text-white " : "bg-[black] text-white"}`
               }`}
             >
               <nav
@@ -79,13 +79,13 @@ export const Header = () => {
                         size="md"
                         outLineColor={
                           stickyHeader
-                            ? "ring-[#030712] hover:bg-[#030712]"
+                            ? "ring-[black] hover:bg-[black]"
                             : "hover:bg-[white] ring-[white] "
                         }
                         textColor={
                           stickyHeader
-                            ? "text-[#030712] hover:text-[white]"
-                            : "hover:text-[#030712]  text-[white]"
+                            ? "text-[black] hover:text-[white]"
+                            : "hover:text-[black]  text-[white]"
                         }
                       >
                         Log in
@@ -96,11 +96,11 @@ export const Header = () => {
                         onClick={() => {}}
                         bgColor={
                           stickyHeader
-                            ? "bg-[#030712] ring-[#030712]"
+                            ? "bg-[black] ring-[black]"
                             : "bg-white ring-[white]"
                         }
                         textColor={
-                          stickyHeader ? "text-[white]" : "text-[#030712]"
+                          stickyHeader ? "text-[white]" : "text-[black]"
                         }
                         size="md"
                       >
@@ -123,7 +123,7 @@ export const Header = () => {
                 onClose={setMobileMenuOpen}
               >
                 <div className="fixed inset-0 z-50" />
-                <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-[#030712] px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white/10">
+                <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-[black] px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white/10">
                   <div className="flex items-center justify-between">
                     <Link to={"/"} className="-m-1.5 p-1.5">
                       <span className="sr-only">Your Company</span>
@@ -162,7 +162,7 @@ export const Header = () => {
                               onClick={() => {}}
                               size="md"
                               outLineColor={"hover:bg-[white] ring-[white] "}
-                              textColor={"hover:text-[#030712]  text-[white]"}
+                              textColor={"hover:text-[black]  text-[white]"}
                             >
                               Log in
                             </Button>
@@ -171,7 +171,7 @@ export const Header = () => {
                             <Button
                               onClick={() => {}}
                               bgColor={"bg-white ring-[white]"}
-                              textColor={"text-[#030712]"}
+                              textColor={"text-[black]"}
                               size="md"
                             >
                               Sign Up – It's Free
