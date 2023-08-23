@@ -1,8 +1,7 @@
 // import SpinnerComponent from "components/spinner/spinnerComponent";
 import { Fragment, lazy, Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
-import Header from "../components/header";
-import Footer from "../components/footer";
+import { Footer, Header } from "../layout";
 
 const AppRoutes = () => {
   const routes = [
