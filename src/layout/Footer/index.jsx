@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { navigation } from "../../config/constants";
+import { labels } from "../../locales";
 
 const social = [
   {
@@ -67,7 +68,7 @@ const social = [
 ];
 const Footer = () => {
   return (
-    <footer className="bg-[#030712]">
+    <footer className="bg-[black]">
       <div className="mx-auto max-w-7xl overflow-hidden px-6 py-20 sm:py-24 lg:px-8">
         <nav
           className="-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12"
@@ -92,7 +93,7 @@ const Footer = () => {
           ))}
         </div>
         <p className="mt-10 text-center text-xs leading-5 text-white font-Poppins_regular">
-          &copy; 2020 Your Company, Inc. All rights reserved.
+          {labels.copyRight}
         </p>
       </div>
     </footer>
