@@ -38,7 +38,7 @@ const Button = (props) => {
   const textColorClasses = textColor ? `${textColor}` : "tex-black";
 
   const mergedClasses = clsx(
-    `uppercase ring-inset w-full rounded text-white ${backgroundClasses} ${textColorClasses} ${sizeClasses(
+    `uppercase ring-inset w-full rounded ${backgroundClasses} ${textColorClasses} ${sizeClasses(
       size
     )}`
   );
