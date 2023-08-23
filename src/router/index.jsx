@@ -8,13 +8,20 @@ const AppRoutes = () => {
     {
       id: "1",
       path: "/",
-      component: lazy(() => import("../pages/home")),
+      component: lazy(() => import("../pages/Home")),
       nestedPaths: [],
     },
     {
       id: "2",
       path: "/about-us",
-      component: lazy(() => import("../pages/about")),
+      component: lazy(() => import("../pages/AboutUs")),
+      nestedPaths: [],
+    },
+
+    {
+      id: "4",
+      path: "/contact-us",
+      component: lazy(() => import("../pages/ContactUs")),
       nestedPaths: [],
     },
   ];
