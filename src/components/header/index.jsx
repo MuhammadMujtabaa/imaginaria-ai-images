@@ -1,16 +1,17 @@
 import { Dialog, Popover } from "@headlessui/react";
-import React, { Fragment, useEffect, useRef, useState } from "react";
-import { Images } from "../../assets/images";
-import Button from "../formComponents/button";
-import { navigation } from "../../config/constants";
+import React, { Fragment, useState } from "react";
+import { AiOutlineClose } from "react-icons/ai";
+import { GiHamburgerMenu } from "react-icons/gi";
 import { Link, useLocation } from "react-router-dom";
+import { Images } from "../../assets/images";
+import { navigation } from "../../config/constants";
+import Button from "../formComponents/button";
 const { logo } = Images;
 
-// import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 const Header = () => {
-  const location = useLocation()
-  const isHome = ["/"]?.includes(location?.pathname)
-  
+  const location = useLocation();
+  const isHome = ["/"]?.includes(location?.pathname);
+
   const [stickyHeader, setStickyHeader] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -33,7 +34,7 @@ const Header = () => {
               className={`transition delay-150  duration-300 ease-in-out  w-full ${
                 stickyHeader === true
                   ? "fixed z-10 bg-white shadow-md text-[#030712]"
-                  : `${isHome ? "text-white " :"bg-[#030712] text-white"}`
+                  : `${isHome ? "text-white " : "bg-[#030712] text-white"}`
               }`}
             >
               <nav
@@ -57,8 +58,7 @@ const Header = () => {
                     onClick={() => setMobileMenuOpen(true)}
                   >
                     <span className="sr-only">Open main menu</span>
-                    |||
-                    {/* <Bars3Icon className="h-6 w-6" aria-hidden="true" /> */}
+                    <GiHamburgerMenu />
                   </button>
                 </div>
                 <div className="hidden lg:flex lg:gap-x-12">
@@ -66,14 +66,14 @@ const Header = () => {
                     <Link
                       key={item?.id}
                       to={item?.link}
-                      className=" font-semibold leading-6 text-inherit font-Poppins_bold uppercase"
+                      className="leading-6 text-inherit font-Poppins_bold uppercase"
                     >
                       {item?.name}
                     </Link>
                   ))}
                 </div>
                 <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-                  <div className="flex gap-5">
+                  <div className="flex gap-5 flex-wrap">
                     <div>
                       <Button
                         onClick={() => {}}
@@ -124,45 +124,61 @@ const Header = () => {
                 onClose={setMobileMenuOpen}
               >
                 <div className="fixed inset-0 z-50" />
-                <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gray-900 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white/10">
+                <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-[#030712] px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white/10">
                   <div className="flex items-center justify-between">
-                    <a href="#" className="-m-1.5 p-1.5">
+                    <Link to={"/"} className="-m-1.5 p-1.5">
                       <span className="sr-only">Your Company</span>
                       <img
-                        className="h-8 w-auto"
-                        src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-                        alt=""
+                        className={`w-40 ${mobileMenuOpen ? "invert" : ""}`}
+                        src={logo}
+                        alt="imaginaria"
                       />
-                    </a>
+                    </Link>
                     <button
                       type="button"
-                      className="-m-2.5 rounded-md p-2.5 text-gray-400"
+                      className="-m-2.5 rounded-md p-2.5 text-gray-400 "
                       onClick={() => setMobileMenuOpen(false)}
                     >
-                      <span className="sr-only">Close menu</span>x
-                      {/* <XMarkIcon className="h-6 w-6" aria-hidden="true" /> */}
+                      <span className="sr-only">Close menu</span>
+                      <AiOutlineClose />
                     </button>
                   </div>
                   <div className="mt-6 flow-root">
                     <div className="-my-6 divide-y divide-gray-500/25">
                       <div className="space-y-2 py-6">
                         {navigation.map((item) => (
-                          <a
+                          <Link
                             key={item.name}
                             href={item.href}
-                            className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-800"
+                            className="-mx-3 block rounded-lg px-3 py-2 text-base leading-7 text-white hover:bg-gray-800 font-Poppins_bold uppercase"
                           >
                             {item.name}
-                          </a>
+                          </Link>
                         ))}
                       </div>
                       <div className="py-6">
-                        <a
-                          href="#"
-                          className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:bg-gray-800"
-                        >
-                          Log in
-                        </a>
+                        <div className="flex gap-5 flex-wrap">
+                          <div>
+                            <Button
+                              onClick={() => {}}
+                              size="md"
+                              outLineColor={"hover:bg-[white] ring-[white] "}
+                              textColor={"hover:text-[#030712]  text-[white]"}
+                            >
+                              Log in
+                            </Button>
+                          </div>
+                          <div>
+                            <Button
+                              onClick={() => {}}
+                              bgColor={"bg-white ring-[white]"}
+                              textColor={"text-[#030712]"}
+                              size="md"
+                            >
+                              Sign Up – It's Free
+                            </Button>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
