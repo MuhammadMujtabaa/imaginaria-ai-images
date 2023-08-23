@@ -1,6 +1,5 @@
 import React, { Fragment } from "react";
-import MainSearchSection from "../../components/pagesComponents/homePage";
-
+import { MainSearchSection } from "../../components/pagesComponents/homePage";
 const Home = () => {
   return (
     <Fragment>
