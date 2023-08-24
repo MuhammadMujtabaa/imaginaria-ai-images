@@ -40,7 +40,7 @@ const Button = (props) => {
   const mergedClasses = clsx(
     `uppercase ring-inset w-full rounded ${backgroundClasses} ${textColorClasses} ${sizeClasses(
       size
-    )}`
+    )} shadow-md`
   );
 
   return (
