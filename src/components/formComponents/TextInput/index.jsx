@@ -12,7 +12,7 @@ const TextInput = ({
   disabled,
   autoComplete = "off",
 }) => {
-  const inputClassNames = `mt-1 p-2 border rounded w-full ${
+  const inputClassNames = `font-Poppins_regular mt-1 p-2 border rounded w-full ${
     error ? "border-red-500" : "border-gray-300"
   } ${disabled ? "opacity-50" : ""}`;
 
