@@ -41,14 +41,14 @@ export const Header = () => {
                 aria-label="Global"
               >
                 <div className="flex lg:flex-1">
-                  <a href="#" className="-m-1.5 p-1.5">
+                  <Link to={"/"} className="-m-1.5 p-1.5">
                     <span className="sr-only">imaginaria</span>
                     <img
                       className={`w-56 ${stickyHeader ? "" : "invert"}`}
                       src={logo}
                       alt="imaginaria"
                     />
-                  </a>
+                  </Link>
                 </div>
                 <div className="flex lg:hidden">
                   <button
