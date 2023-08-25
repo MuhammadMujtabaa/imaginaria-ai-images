@@ -5,7 +5,7 @@ import LazyLoaderSpinner from "../components/lazyLoaderSpinner";
 
 const delayTime = 1000;
 const AppRoutes = () => {
-  const routes = [
+  const routes = [ 
     // {
     //   id: "1",
     //   path: "/",
