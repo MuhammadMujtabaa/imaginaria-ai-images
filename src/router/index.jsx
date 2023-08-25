@@ -9,12 +9,11 @@ const AppRoutes = () => {
     {
       id: "1",
       path: "/",
-      component:lazy(() =>import(".")),
-      // component: lazy(() => {
-      //   return new Promise((resolve) => {
-      //     setTimeout(() => resolve(import("../pages/Home")), delayTime);
-      //   });
-      // }),
+      component: lazy(() => {
+        return new Promise((resolve) => {
+          setTimeout(() => resolve(import("../pages/Home")), delayTime);
+        });
+      }),
       nestedPaths: [],
     },
     {
@@ -52,9 +51,9 @@ const AppRoutes = () => {
               path={item?.path}
               element={
                 <Suspense fallback={<LazyLoaderSpinner />}>
-                  {/* <Header /> */}
+                  <Header />
                   <item.component />
-                  {/* <Footer /> */}
+                  <Footer />
                 </Suspense>
               }
             >
