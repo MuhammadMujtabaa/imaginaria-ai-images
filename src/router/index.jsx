@@ -5,20 +5,20 @@ import LazyLoaderSpinner from "../components/lazyLoaderSpinner";
 
 const delayTime = 1000;
 const AppRoutes = () => {
-  const routes = [ 
-    // {
-    //   id: "1",
-    //   path: "/",
-    //   component: lazy(() => {
-    //     return new Promise((resolve) => {
-    //       setTimeout(() => resolve(import("../pages/Home/index")), delayTime);
-    //     });
-    //   }),
-    //   nestedPaths: [],
-    // },
+  const routes = [
+    {
+      id: "1",
+      path: "/",
+      component: lazy(() => {
+        return new Promise((resolve) => {
+          setTimeout(() => resolve(import("../pages/Home/index")), delayTime);
+        });
+      }),
+      nestedPaths: [],
+    },
     {
       id: "2",
-      path: "/",
+      path: "/about-us",
       component: lazy(() => {
         return new Promise((resolve) => {
           setTimeout(() => resolve(import("../pages/AboutUs")), delayTime);

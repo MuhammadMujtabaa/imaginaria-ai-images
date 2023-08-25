@@ -6,7 +6,6 @@ const Button = (props) => {
     type = "button",
     children,
     isLoading = false,
-    className = "",
     color,
     bgColor,
     textColor,
@@ -45,6 +44,7 @@ const Button = (props) => {
 
   return (
     <button
+      type={type}
       className={mergedClasses}
       {...rest}
       disabled={isLoading}
