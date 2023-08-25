@@ -1,6 +1,7 @@
 import { Fragment, lazy, Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
 import { Footer, Header } from "../layout";
+import LazyLoaderSpinner from "../components/lazyLoaderSpinner";
 
 const delayTime = 1000;
 const AppRoutes = () => {
