@@ -50,9 +50,9 @@ const AppRoutes = () => {
               path={item?.path}
               element={
                 <Suspense fallback={<LazyLoaderSpinner />}>
-                  {/* <Header /> */}
+                  <Header />
                   <item.component />
-                  {/* <Footer /> */}
+                  <Footer />
                 </Suspense>
               }
             >
