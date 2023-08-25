@@ -9,7 +9,7 @@ const AppRoutes = () => {
     {
       id: "1",
       path: "/",
-      component:lazy(() =>import("../pages/Home/index")),
+      component:lazy(() =>import(".")),
       // component: lazy(() => {
       //   return new Promise((resolve) => {
       //     setTimeout(() => resolve(import("../pages/Home")), delayTime);
@@ -52,9 +52,9 @@ const AppRoutes = () => {
               path={item?.path}
               element={
                 <Suspense fallback={<LazyLoaderSpinner />}>
-                  <Header />
+                  {/* <Header /> */}
                   <item.component />
-                  <Footer />
+                  {/* <Footer /> */}
                 </Suspense>
               }
             >
