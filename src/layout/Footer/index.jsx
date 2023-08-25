@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { navigation } from "../../config/constants";
+import { navigation } from "../../utils/constants";
 import { labels } from "../../locales";
 
 const social = [

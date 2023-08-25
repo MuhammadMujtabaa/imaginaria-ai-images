@@ -4,8 +4,9 @@ import { AiOutlineClose } from "react-icons/ai";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { Link, useLocation } from "react-router-dom";
 import { Images } from "../../assets/images";
-import { navigation } from "../../config/constants";
+
 import { Button } from "../../components/formComponents";
+import { navigation } from "../../utils/constants";
 const { logo } = Images;
 export const Header = () => {
   const location = useLocation();
