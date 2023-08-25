@@ -1,34 +1,47 @@
-// import SpinnerComponent from "components/spinner/spinnerComponent";
 import { Fragment, lazy, Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
 import { Footer, Header } from "../layout";
 
+const delayTime = 1000;
 const AppRoutes = () => {
   const routes = [
     {
       id: "1",
       path: "/",
-      component: lazy(() => import("../pages/Home")),
+      component: lazy(() => {
+        return new Promise((resolve) => {
+          setTimeout(() => resolve(import("../pages/Home")), delayTime);
+        });
+      }),
       nestedPaths: [],
     },
     {
       id: "2",
       path: "/about-us",
-      component: lazy(() => import("../pages/AboutUs")),
+
+      component: lazy(() => {
+        return new Promise((resolve) => {
+          setTimeout(() => resolve(import("../pages/AboutUs")), delayTime);
+        });
+      }),
       nestedPaths: [],
     },
 
     {
       id: "4",
       path: "/contact-us",
-      component: lazy(() => import("../pages/ContactUs")),
+
+      component: lazy(() => {
+        return new Promise((resolve) => {
+          setTimeout(() => resolve(import("../pages/ContactUs")), delayTime);
+        });
+      }),
       nestedPaths: [],
     },
   ];
 
   return (
     <Fragment>
-      <Header />
       <>
         <Routes>
           {routes?.map((item) => (
@@ -36,10 +49,10 @@ const AppRoutes = () => {
               key={item?.id}
               path={item?.path}
               element={
-                <Suspense
-                // fallback={<SpinnerComponent />}
-                >
+                <Suspense fallback={<LazyLoaderSpinner />}>
+                  <Header />
                   <item.component />
+                  <Footer />
                 </Suspense>
               }
             >
@@ -59,7 +72,6 @@ const AppRoutes = () => {
           ))}
         </Routes>
       </>
-      <Footer />
     </Fragment>
   );
 };
