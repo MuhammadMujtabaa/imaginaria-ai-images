@@ -19,7 +19,6 @@ const AppRoutes = () => {
     {
       id: "2",
       path: "/about-us",
-
       component: lazy(() => {
         return new Promise((resolve) => {
           setTimeout(() => resolve(import("../pages/AboutUs")), delayTime);
