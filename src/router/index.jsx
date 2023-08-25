@@ -9,12 +9,11 @@ const AppRoutes = () => {
     {
       id: "1",
       path: "/",
-      component: lazy(() => import("../pages/Home")),
-      // {
-      //   return new Promise((resolve) => {
-      //     setTimeout(() => resolve(import("../pages/Home")), delayTime);
-      //   });
-      // }),
+      component: lazy(() => {
+        return new Promise((resolve) => {
+          setTimeout(() => resolve(import("../pages/Home")), delayTime);
+        });
+      }),
       nestedPaths: [],
     },
     {
