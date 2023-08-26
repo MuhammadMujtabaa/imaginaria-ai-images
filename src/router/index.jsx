@@ -11,7 +11,7 @@ const AppRoutes = () => {
       path: "/",
       component: lazy(() => {
         return new Promise((resolve) => {
-          setTimeout(() => resolve(import("../pages/home")), delayTime);
+          setTimeout(() => resolve(import("../pages/Home")), delayTime);
         });
       }),
       nestedPaths: [],
