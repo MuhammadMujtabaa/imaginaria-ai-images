@@ -1,5 +1,27 @@
 import React, { Fragment } from "react";
+import { Images } from "../../assets/images";
 
+const {
+  Imaginaria2,
+  Imaginaria3,
+  Imaginaria4,
+  Imaginaria5,
+  Imaginaria6,
+  Imaginaria7,
+  Imaginaria8,
+  Imaginaria9,
+  Imaginaria10,
+  Imaginaria11,
+  Imaginaria12,
+  Imaginaria13,
+  Imaginaria14,
+  Imaginaria15,
+  Imaginaria16,
+  Imaginaria17,
+  Imaginaria18,
+  Imaginaria19,
+  Imaginaria20,
+} = Images;
 const About = () => {
   return (
     <Fragment>
@@ -49,14 +71,14 @@ const About = () => {
               />
             </div>
             <div className="overflow-hidden">
-              <div className="mx-auto max-w-7xl px-6 pb-32 pt-36 sm:pt-60 lg:px-8 lg:pt-32">
+              <div className="mx-auto max-w-7xl px-6 pt-36 sm:pt-60 lg:px-0 lg:pt-32">
                 <div className="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
                   <div className="w-full max-w-xl lg:shrink-0 xl:max-w-2xl">
-                    <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl font-Poppins_bold">
+                    <h2 className="text-2xl font-bold tracking-tight text-[#000000] sm:text-5xl font-Poppins_bold">
                       Imaginaria
                       <br />
                       Where Imagination Meets Innovation
-                    </h1>
+                    </h2>
                     <p className="relative mt-6 leading-8 text-gray-600 sm:max-w-md lg:max-w-none font-Poppins_regular">
                       Taking inspiration from visionaries like Walt Disney, who
                       dared to dream and brought those dreams to life, we too
@@ -81,11 +103,11 @@ const About = () => {
                       storytelling in this digital era.
                     </p>
                   </div>
-                  <div className="mt-14 flex justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0">
+                  <div className="mt-14 flex justify-end gap-5 -ml-4 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0">
                     <div className="ml-auto w-44 flex-none space-y-8 pt-32 sm:ml-0 sm:pt-80 lg:order-last lg:pt-36 xl:order-none xl:pt-80">
                       <div className="relative">
                         <img
-                          src="https://imaginaria.onrender.com/assets/Imaginaria-about-1-57f801e7.jpg"
+                          src={Imaginaria3}
                           alt=""
                           className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                         />
@@ -95,7 +117,7 @@ const About = () => {
                     <div className="mr-auto w-44 flex-none space-y-8 sm:mr-0 sm:pt-52 lg:pt-36">
                       <div className="relative">
                         <img
-                          src="https://img.freepik.com/free-photo/person-choosing-where-they-work-from-hybrid-working-model_23-2149483823.jpg?w=740&t=st=1692735163~exp=1692735763~hmac=f7346fe8930214355fb2bd967ad22c2113d8f27a133d4b792fc48e2540545e04"
+                          src={Imaginaria14}
                           alt=""
                           className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                         />
@@ -103,7 +125,7 @@ const About = () => {
                       </div>
                       <div className="relative">
                         <img
-                          src="https://img.freepik.com/free-photo/ai-cloud-concept-with-robot-arm_23-2149739748.jpg?w=1060&t=st=1692735318~exp=1692735918~hmac=d96e0c678118e0f61a5f119264ec503f497a496d00a04b8fb85a2e590a8ee372"
+                          src={Imaginaria19}
                           alt=""
                           className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                         />
@@ -113,7 +135,7 @@ const About = () => {
                     <div className="w-44 flex-none space-y-8 pt-32 sm:pt-0">
                       <div className="relative">
                         <img
-                          src="https://img.freepik.com/free-photo/3d-rendering-holographic-layering_23-2150491103.jpg?w=826&t=st=1692735002~exp=1692735602~hmac=0caeaa8ec1ab59fa939e9706a79b49fd2ff038cd5b83f216c1ab468d0b82ba70"
+                          src={Imaginaria10}
                           alt=""
                           className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                         />
@@ -121,7 +143,7 @@ const About = () => {
                       </div>
                       <div className="relative">
                         <img
-                          src="https://img.freepik.com/free-photo/medium-shot-man-city-double-exposure_23-2149303230.jpg?size=626&ext=jpg&ga=GA1.2.133694367.1682534327&semt=ais"
+                          src={Imaginaria15}
                           alt=""
                           className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                         />
@@ -135,19 +157,20 @@ const About = () => {
           </div>
 
           {/* Image section */}
-          <div className="mt-32 sm:mt-40 xl:mx-auto xl:max-w-7xl xl:px-8">
+          <div className="mt-32 sm:mt-40 xl:mx-auto xl:max-w-7xl xl:px-0">
             <img
-              src="https://img.freepik.com/free-photo/poster-movie-vr-neon-colors_188544-22011.jpg?t=st=1692735844~exp=1692739444~hmac=8a2bafad3b907f5ebfadb7f40c512d19a9a7db600ed3d30d706cd8267242a695&w=1380"
+              src={Imaginaria2}
               alt=""
               className="aspect-[5/2] w-full object-cover xl:rounded-3xl"
+              draggable="false"
             />
           </div>
 
-          <div className="mt-32 overflow-hidden sm:mt-40">
-            <div className="mx-auto max-w-7xl px-6 lg:flex lg:px-8">
-              <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-12 gap-y-16 lg:mx-0 lg:min-w-full lg:max-w-none lg:flex-none lg:gap-y-8">
+          <div className="mt-32 overflow-hidden sm:mt-40 pb-32">
+            <div className="mx-auto max-w-7xl px-6 lg:flex lg:px-0">
+              <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-12 gap-y-16 lg:mx-0 lg:min-w-full lg:max-w-none lg:gap-y-8">
                 <div className="lg:col-end-1 lg:w-full lg:max-w-lg lg:pb-8">
-                  <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl font-Poppins_medium">
+                  <h2 className="text-2xl font-bold tracking-tight text-[#000000] sm:text-4xl font-Poppins_medium">
                     Unlock Your Creativity with AI
                   </h2>
                   <p className="mt-6 leading-8 text-gray-600 sm:max-w-md lg:max-w-none font-Poppins_regular">
@@ -176,29 +199,32 @@ const About = () => {
                 <div className="flex flex-wrap items-start justify-end gap-6 sm:gap-8 lg:contents">
                   <div className="w-0 flex-auto lg:ml-auto lg:w-auto lg:flex-none lg:self-end">
                     <img
-                      src="https://img.freepik.com/free-photo/portrait-woman-with-fire_71767-120.jpg?w=826&t=st=1692735591~exp=1692736191~hmac=1bb844d1d1d42ad9d4430facde7a919823473099fcd19dbb661081384e6269b1"
+                      src={Imaginaria8}
                       alt=""
-                      className="aspect-[7/5] w-[37rem] max-w-none rounded-2xl bg-gray-50 object-cover"
+                      className="aspect-[7/5] sm:w-[37rem] w-full max-w-none rounded-2xl bg-gray-50 object-cover"
                     />
                   </div>
-                  <div className="contents lg:col-span-2 lg:col-end-2 lg:ml-auto lg:flex lg:w-[37rem] lg:items-start lg:justify-end lg:gap-x-8">
+                  <div
+                    className=" lg:col-span-2 lg:flex lg:gap-x-8 space-y-8"
+                    //className=" lg:col-span-2 lg:col-end-2 lg:ml-auto lg:flex lg:w-[37rem] lg:items-start lg:justify-end lg:gap-x-8"
+                  >
                     <div className="order-first flex w-64 flex-none justify-end self-end lg:w-auto">
                       <img
-                        src="https://imaginaria.onrender.com/assets/heroImage-ed0ff50d.jpg"
+                        src={Imaginaria20}
                         alt=""
-                        className="aspect-[4/3] w-[24rem] max-w-none flex-none rounded-2xl bg-gray-50 object-cover"
+                        className="aspect-[4/3] sm:w-[24rem] w-full max-w-none flex-none rounded-2xl bg-gray-50 object-cover"
                       />
                     </div>
                     <div className="flex w-96 flex-auto justify-end lg:w-auto lg:flex-none">
                       <img
-                        src="https://imaginaria.onrender.com/assets/Imaginaria-about-3-b726c0a8.jpg"
+                        src={Imaginaria6}
                         alt=""
-                        className="aspect-[7/5] w-[37rem] max-w-none flex-none rounded-2xl bg-gray-50 object-cover"
+                        className="aspect-[7/5] sm:w-[28rem] w-full max-w-none flex-none rounded-2xl bg-gray-50 object-cover"
                       />
                     </div>
                     <div className="hidden sm:block sm:w-0 sm:flex-auto lg:w-auto lg:flex-none">
                       <img
-                        src="https://imaginaria.onrender.com/assets/Imaginaria-about-2-4fd14296.jpg"
+                        src={Imaginaria13}
                         alt=""
                         className="aspect-[4/3] w-[24rem] max-w-none rounded-2xl bg-gray-50 object-cover"
                       />
