@@ -173,7 +173,7 @@ const About = () => {
                   <h2 className="text-2xl font-bold tracking-tight text-[#000000] sm:text-4xl font-Poppins_medium">
                     Unlock Your Creativity with AI
                   </h2>
-                  <p className="mt-6 leading-8 text-gray-600 sm:max-w-md lg:max-w-none font-Poppins_regular">
+                  <p className="mt-6 leading-8 text-gray-600 md:max-w-full lg:max-w-none font-Poppins_regular">
                     Imaginaria is a complimentary service committed to inspiring
                     creativity through AI-generated imagery. Unlock the
                     remarkable creative potential of AI with our extensive image
@@ -181,7 +181,7 @@ const About = () => {
                     Midjourney AI, DALL-E, Leonardo, Night Café, Stable
                     Diffusion, and many others.
                   </p>
-                  <p className="mt-6 leading-8 text-gray-600 sm:max-w-md lg:max-w-none font-Poppins_regular">
+                  <p className="mt-6 leading-8 text-gray-600 md:max-w-full lg:max-w-none font-Poppins_regular">
                     Each image in our collection stands as a testament to the
                     extraordinary capabilities of AI, serving as a dynamic
                     co-pilot in the realm of creativity. We offer this service
@@ -189,7 +189,7 @@ const About = () => {
                     platform to share stunning images and prompts from
                     imagemakers worldwide.
                   </p>
-                  <p className="mt-6 leading-8 text-gray-600 sm:max-w-md lg:max-w-none font-Poppins_regular">
+                  <p className="mt-6 leading-8 text-gray-600 md:max-w-full lg:max-w-none font-Poppins_regular">
                     Here, you're invited to not just appreciate art but interact
                     with it. Download an image that catches your eye or seize a
                     prompt from any image to craft your very own version using
@@ -197,7 +197,7 @@ const About = () => {
                   </p>
                 </div>
                 <div className="flex flex-wrap items-start justify-end gap-6 sm:gap-8 lg:contents">
-                  <div className="w-0 flex-auto lg:ml-auto lg:w-auto lg:flex-none lg:self-end">
+                  <div className="w-0 flex-auto lg:ml-auto lg:w-auto w-full lg:flex-none lg:self-end">
                     <img
                       src={Imaginaria8}
                       alt=""
@@ -212,7 +212,7 @@ const About = () => {
                       <img
                         src={Imaginaria20}
                         alt=""
-                        className="aspect-[4/3] sm:w-[24rem] w-full max-w-none flex-none rounded-2xl bg-gray-50 object-cover"
+                        className="aspect-[4/3] sm:w-[24rem] w-full  max-w-none flex-none rounded-2xl bg-gray-50 object-cover"
                       />
                     </div>
                     <div className="flex w-96 flex-auto justify-end lg:w-auto lg:flex-none">
@@ -226,7 +226,7 @@ const About = () => {
                       <img
                         src={Imaginaria13}
                         alt=""
-                        className="aspect-[4/3] w-[24rem] max-w-none rounded-2xl bg-gray-50 object-cover"
+                        className="aspect-[4/3]  sm:w-[24rem] w-full  max-w-none rounded-2xl bg-gray-50 object-cover"
                       />
                     </div>
                   </div>
