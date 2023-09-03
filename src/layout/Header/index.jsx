@@ -7,7 +7,7 @@ import { Images } from "../../assets/images";
 
 import { Button } from "../../components/formComponents";
 import { navigation } from "../../utils/constants";
-const { logo } = Images;
+const { logo, imaginaria } = Images;
 export const Header = () => {
   const location = useLocation();
   const isHome = ["/"]?.includes(location?.pathname);
@@ -36,19 +36,28 @@ export const Header = () => {
                   ? "fixed z-10 bg-white shadow-md text-[black]"
                   : `${isHome ? "text-white " : "bg-[black] text-white"}`
               }`}
+              //mx-auto max-w-7xl px-6 pb-32 pt-36 sm:pt-60 lg:px-8 lg:pt-32
             >
               <nav
-                className={`flex items-center justify-between p-6 lg:px-8 `}
+                // className={`flex items-center justify-between p-6 lg:px-8 `}
+                className={`mx-auto max-w-7xl flex items-center justify-between py-6 lg:px-0 px-4`}
                 aria-label="Global"
               >
                 <div className="flex lg:flex-1">
                   <Link to={"/"} className="-m-1.5 p-1.5">
                     <span className="sr-only">imaginaria</span>
-                    <img
-                      className={`w-56 ${stickyHeader ? "" : "invert"}`}
-                      src={logo}
-                      alt="imaginaria"
-                    />
+                    <div className="flex items-end space-x-3">
+                      <img
+                        className={`w-10 ${stickyHeader ? "" : "invert"}`}
+                        src={imaginaria}
+                        alt="imaginaria"
+                      />
+                      <img
+                        className={`w-40 ${stickyHeader ? "" : "invert"}`}
+                        src={logo}
+                        alt="imaginaria"
+                      />
+                    </div>
                   </Link>
                 </div>
                 <div className="flex lg:hidden">
@@ -127,12 +136,19 @@ export const Header = () => {
                 <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-[black] px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white/10">
                   <div className="flex items-center justify-between">
                     <Link to={"/"} className="-m-1.5 p-1.5">
-                      <span className="sr-only">Your Company</span>
-                      <img
-                        className={`w-40 ${mobileMenuOpen ? "invert" : ""}`}
-                        src={logo}
-                        alt="imaginaria"
-                      />
+                      <span className="sr-only">imaginaria</span>
+                      <div className="flex items-end space-x-3">
+                        <img
+                          className={`w-10 ${"invert"}`}
+                          src={imaginaria}
+                          alt="imaginaria"
+                        />
+                        <img
+                          className={`w-40 ${"invert"}`}
+                          src={logo}
+                          alt="imaginaria"
+                        />
+                      </div>
                     </Link>
                     <button
                       type="button"
@@ -149,7 +165,7 @@ export const Header = () => {
                         {navigation.map((item) => (
                           <Link
                             key={item.name}
-                            href={item.href}
+                            to={item.href}
                             className="-mx-3 block rounded-lg px-3 py-2 text-base leading-7 text-white hover:bg-gray-800 font-Poppins_bold uppercase"
                           >
                             {item.name}
