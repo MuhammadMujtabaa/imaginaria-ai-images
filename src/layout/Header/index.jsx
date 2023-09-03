@@ -165,7 +165,7 @@ export const Header = () => {
                         {navigation.map((item) => (
                           <Link
                             key={item.name}
-                            to={item.href}
+                            to={item.link}
                             className="-mx-3 block rounded-lg px-3 py-2 text-base leading-7 text-white hover:bg-gray-800 font-Poppins_bold uppercase"
                           >
                             {item.name}
