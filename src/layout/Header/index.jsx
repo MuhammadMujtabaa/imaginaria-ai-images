@@ -25,6 +25,7 @@ export const Header = () => {
   };
   window.addEventListener("scroll", fixHeaderFunction);
 
+  const handleClickNavigationItem  = () => setMobileMenuOpen(false)
   return (
     <Fragment>
       <>
@@ -44,7 +45,7 @@ export const Header = () => {
                 aria-label="Global"
               >
                 <div className="flex lg:flex-1">
-                  <Link to={"/"} className="-m-1.5 p-1.5">
+                  <Link to={"/"} className="-m-1.5 p-1.5" onClick={handleClickNavigationItem}>
                     <span className="sr-only">imaginaria</span>
                     <div className="flex items-end space-x-3">
                       <img
@@ -76,6 +77,7 @@ export const Header = () => {
                       key={item?.id}
                       to={item?.link}
                       className="leading-6 text-inherit font-Poppins_bold uppercase"
+                      onClick={handleClickNavigationItem}
                     >
                       {item?.name}
                     </Link>
@@ -135,7 +137,7 @@ export const Header = () => {
                 <div className="fixed inset-0 z-50" />
                 <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-[black] px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white/10">
                   <div className="flex items-center justify-between">
-                    <Link to={"/"} className="-m-1.5 p-1.5">
+                    <Link to={"/"} className="-m-1.5 p-1.5" onClick={handleClickNavigationItem}>
                       <span className="sr-only">imaginaria</span>
                       <div className="flex items-end space-x-3">
                         <img
@@ -166,6 +168,7 @@ export const Header = () => {
                           <Link
                             key={item.name}
                             to={item.link}
+                            onClick={handleClickNavigationItem}
                             className="-mx-3 block rounded-lg px-3 py-2 text-base leading-7 text-white hover:bg-gray-800 font-Poppins_bold uppercase"
                           >
                             {item.name}
