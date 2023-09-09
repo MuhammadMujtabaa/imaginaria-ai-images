@@ -1,10 +1,11 @@
 import React, { Fragment } from "react";
 import { MainSearchSection } from "../../components/pagesComponents/homePage";
+import ImageAlbum from "../../components/pagesComponents/homePage/ImageAlbum";
 const Home = () => {
   return (
     <Fragment>
       <MainSearchSection />
-      <div className="bg-[#FAFAFA] min-h-[80vh]">Home</div>
+      <ImageAlbum />
     </Fragment>
   );
 };
