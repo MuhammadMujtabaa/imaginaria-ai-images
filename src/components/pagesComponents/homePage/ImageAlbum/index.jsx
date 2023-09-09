@@ -2,26 +2,17 @@ import React, { useState, useEffect } from "react";
 import ImageComponent from "../imageComponent";
 
 const distributeArrayIntoSubArrays = (array) => {
-  // Calculate the number of items per subarray (excluding the last one)
-  const itemsPerSubarray = Math.floor(array.length / 3);
-
-  // Initialize an array of arrays to store subarrays
+  const parts = 3;
+  const itemsPerPart = Math.ceil(array.length / parts);
   const subarrays = [];
 
-  // Distribute the items into subarrays
-  for (let i = 0; i < array.length; i += itemsPerSubarray) {
-    const subarray = array.slice(i, i + itemsPerSubarray);
+  for (let i = 0; i < parts; i++) {
+    const start = i * itemsPerPart;
+    const end = (i + 1) * itemsPerPart;
+    const subarray = array.slice(start, end);
     subarrays.push(subarray);
   }
 
-  // If there are remaining items, add them to the last subarray
-  const remainingItems = array.slice(subarrays.length * itemsPerSubarray);
-  if (remainingItems.length > 0) {
-    subarrays[subarrays.length - 1] =
-      subarrays[subarrays.length - 1].concat(remainingItems);
-  }
-
-  // Return the subarrays
   return subarrays;
 };
 
