@@ -3,18 +3,36 @@ import ImageComponent from "../imageComponent";
 
 const distributeArrayIntoSubArrays = (array) => {
   const parts = 3;
-  const itemsPerPart = Math.ceil(array.length / parts);
+  if (parts <= 0) {
+    throw new Error("The number of parts must be greater than zero.");
+  }
+
+  const itemsPerPart = Math.floor(array.length / parts);
   const subarrays = [];
 
+  let startIndex = 0;
   for (let i = 0; i < parts; i++) {
-    const start = i * itemsPerPart;
-    const end = (i + 1) * itemsPerPart;
-    const subarray = array.slice(start, end);
+    const endIndex =
+      startIndex + itemsPerPart + (i < array.length % parts ? 1 : 0);
+    const subarray = array.slice(startIndex, endIndex);
     subarrays.push(subarray);
+    startIndex = endIndex;
   }
 
   return subarrays;
 };
+
+// Example usage:
+const originalArray = [
+  /* Your 25 array elements here */
+];
+const parts = 3;
+const subarrays = distributeArrayIntoSubArrays(originalArray, parts);
+
+// Print the subarrays
+for (let i = 0; i < subarrays.length; i++) {
+  console.log(`Part ${i + 1}:`, subarrays[i]);
+}
 
 const ImageAlbum = () => {
   const [images, setImages] = useState([]);
